@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_kertas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:text="Kertas"
+        android:textColor="@color/yellow"
+        android:fontFamily="@font/oneoftheguys"
+        android:rotation="-15"
+        android:textSize="40sp"
+        />
+
+    <TextView
+        android:id="@+id/tv_gunting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_kertas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="-10dp"
+        android:text="Gunting"
+        android:textColor="@color/green"
+        android:fontFamily="@font/oneoftheguys"
+        android:rotation="-15"
+        android:textSize="40sp"
+        />
+
+    <TextView
+        android:id="@+id/tv_batu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_gunting"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="-10dp"
+        android:text="Batu"
+        android:textColor="@color/purple"
+        android:fontFamily="@font/oneoftheguys"
+        android:rotation="-15"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="VS"
+        android:fontFamily="@font/oneoftheguys"
+        android:textSize="80sp"
+        android:rotation="-15"
+        android:textColor="@color/red"
+        />
+
+    <TextView
+        android:id="@+id/tv_pemain1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_batu"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Pemain 1"
+        android:fontFamily="@font/oneoftheguys"
+        android:textSize="25sp"
+        android:textColor="@color/blue"
+        android:layout_margin="30dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_com"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_batu"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="COM"
+        android:fontFamily="@font/oneoftheguys"
+        android:textSize="25sp"
+        android:textColor="@color/blue"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="50dp"
+        />
+
+    <ImageButton
+        android:id="@+id/ib_batup1"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:layout_constraintStart_toStartOf="@id/tv_pemain1"
+        app:layout_constraintTop_toBottomOf="@id/tv_pemain1"
+        android:src="@drawable/batu"
+        android:background="@color/white"
+        android:layout_marginTop="15dp"
+        />
+
+    <ImageButton
+        android:id="@+id/ib_kertasp1"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:layout_constraintStart_toStartOf="@id/ib_batup1"
+        app:layout_constraintTop_toBottomOf="@id/ib_batup1"
+        android:src="@drawable/kertas"
+        android:background="@color/white"
+        android:layout_marginTop="15dp"
+        />
+
+    <ImageButton
+        android:id="@+id/ib_guntingp1"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:layout_constraintStart_toStartOf="@id/ib_kertasp1"
+        app:layout_constraintTop_toBottomOf="@id/ib_kertasp1"
+        android:src="@drawable/gunting"
+        android:background="@color/white"
+        android:layout_marginTop="15dp"
+        />
+
+    <ImageButton
+        android:id="@+id/ib_batucom"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:layout_constraintEnd_toEndOf="@id/tv_com"
+        app:layout_constraintStart_toStartOf="@id/tv_com"
+        app:layout_constraintTop_toBottomOf="@id/tv_com"
+        android:src="@drawable/batu"
+        android:background="@color/white"
+        android:layout_marginTop="15dp"
+        />
+
+    <ImageButton
+        android:id="@+id/ib_kertascom"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:layout_constraintStart_toStartOf="@id/ib_batucom"
+        app:layout_constraintTop_toBottomOf="@id/ib_batucom"
+        android:src="@drawable/kertas"
+        android:background="@color/white"
+        android:layout_marginTop="15dp"
+        />
+
+    <ImageButton
+        android:id="@+id/ib_guntingcom"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:layout_constraintStart_toStartOf="@id/ib_kertascom"
+        app:layout_constraintTop_toBottomOf="@id/ib_kertascom"
+        android:src="@drawable/gunting"
+        android:background="@color/white"
+        android:layout_marginTop="15dp"
+        />
+
+    <ImageButton
+        android:id="@+id/ib_refresh"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/refresh"
+        android:layout_margin="15dp"
+        android:background="@color/white"
+        />
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
